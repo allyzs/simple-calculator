@@ -8,31 +8,33 @@
     </head>
     <body>
         <section class="input">
-            <textarea>
+            <textarea name="input-display" id="input-display">
             </textarea>
         </section>
         <section class="output">
             <label for="">tada</label>
         </section>
         <section class="keys">
-            <button>C</button>
-            <button>/</button>
-            <button>*</button>
-            <button>&#8249;</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>%</button>
-            <button>0</button>
-            <button>.</button>
+            <button type="button" onclick="resetInputScreen()">C</button>
+            <button type="button" onclick="displayInput(value)" value="/">/</button>
+            <button type="button" onclick="displayInput(value)" value="*">*</button>
+            <button type="button" onclick="deleteInput()">&#8249;</button>
+            <button type="button" onclick="displayInput(value)" value="7">7</button>
+            <button type="button" onclick="displayInput(value)" value="8">8</button>
+            <button type="button" onclick="displayInput(value)" value="9">9</button>
+            <button type="button" onclick="displayInput(value)" value="-">-</button>
+            <button type="button" onclick="displayInput(value)" value="4">4</button>
+            <button type="button" onclick="displayInput(value)" value="5">5</button>
+            <button type="button" onclick="displayInput(value)" value="6">6</button>
+            <button type="button" onclick="displayInput(value)" value="+">+</button>
+            <button type="button" onclick="displayInput(value)" value="1">1</button>
+            <button type="button" onclick="displayInput(value)" value="2">2</button>
+            <button type="button" onclick="displayInput(value)" value="3">3</button>
+            <button type="button">=</button>
+            <button type="button" onclick="displayInput(value)" value="%">%</button>
+            <button type="button" onclick="displayInput(value)" value="0">0</button>
+            <button type="button" onclick="displayInput(value)" value=".">.</button>
         </section>
+        <script src="/script.js"></script>
     </body>
 </html>
