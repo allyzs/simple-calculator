@@ -7,34 +7,48 @@
         <link rel="stylesheet" href="/style.css"/>
     </head>
     <body>
-        <section class="input">
-            <textarea name="input-display" id="input-display">
-            </textarea>
-        </section>
-        <section class="output">
-            <label name="output-result" id="output-result"></label>
-        </section>
-        <section class="keys">
-            <button type="button" onclick="resetInputScreen()">C</button>
-            <button type="button" onclick="displayInput(value)" value="/">/</button>
-            <button type="button" onclick="displayInput(value)" value="*">*</button>
-            <button type="button" onclick="deleteInput()">&#8249;</button>
-            <button type="button" onclick="displayInput(value)" value="7">7</button>
-            <button type="button" onclick="displayInput(value)" value="8">8</button>
-            <button type="button" onclick="displayInput(value)" value="9">9</button>
-            <button type="button" onclick="displayInput(value)" value="-">-</button>
-            <button type="button" onclick="displayInput(value)" value="4">4</button>
-            <button type="button" onclick="displayInput(value)" value="5">5</button>
-            <button type="button" onclick="displayInput(value)" value="6">6</button>
-            <button type="button" onclick="displayInput(value)" value="+">+</button>
-            <button type="button" onclick="displayInput(value)" value="1">1</button>
-            <button type="button" onclick="displayInput(value)" value="2">2</button>
-            <button type="button" onclick="displayInput(value)" value="3">3</button>
-            <button type="button" onclick="displayTotal()">=</button>
-            <button type="button" onclick="displayInput(value)" value="%">%</button>
-            <button type="button" onclick="displayInput(value)" value="0">0</button>
-            <button type="button" onclick="displayInput(value)" value=".">.</button>
-        </section>
+        <div class="main-application">
+            <div class="calculator">
+                <div>
+                    <textarea class="input" name="input-display" id="input-display" rows="2"onkeypress="checkValidEntry()"></textarea>
+                </div>
+                <div>
+                    <label class="output" name="output-result" id="output-result">0</label>
+                </div>
+                <div class="calculator-keys">
+                    <div class="row-1">
+                        <button type="button" onclick="resetInputScreen()">C</button>
+                        <button type="button" onclick="displayInput(value)" value="/">/</button>
+                        <button type="button" onclick="displayInput(value)" value="*">*</button>
+                        <button type="button" onclick="deleteInput()">&#8249;</button>
+                    </div>
+                    <div class="row-2">
+                        <button type="button" onclick="displayInput(value)" value="7">7</button>
+                        <button type="button" onclick="displayInput(value)" value="8">8</button>
+                        <button type="button" onclick="displayInput(value)" value="9">9</button>
+                        <button type="button" onclick="displayInput(value)" value="-">-</button>
+                    </div>
+                    <div class="row-3">
+                        <button type="button" onclick="displayInput(value)" value="4">4</button>
+                        <button type="button" onclick="displayInput(value)" value="5">5</button>
+                        <button type="button" onclick="displayInput(value)" value="6">6</button>
+                        <button type="button" onclick="displayInput(value)" value="+">+</button>
+                    </div>
+                    <div class="row-4">
+                        <button type="button" onclick="displayInput(value)" value="1">1</button>
+                        <button type="button" onclick="displayInput(value)" value="2">2</button>
+                        <button type="button" onclick="displayInput(value)" value="3">3</button>
+                        <button type="button" onclick="displayTotal()">=</button>
+                    </div>
+                    <div class="row-5">
+                        <button type="button" onclick="displayInput(value)" value="%">%</button>
+                        <button type="button" onclick="displayInput(value)" value="0">0</button>
+                        <button type="button" onclick="displayInput(value)" value=".">.</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <script src="/script.js"></script>
     </body>
 </html>
