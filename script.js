@@ -2,11 +2,19 @@ const displayScreen = document.getElementById('input-display')
 const displayOutput = document.getElementById('output-result')
 
 function displayInput(enteredValue) {
-    if (!displayScreen.value) {
-      displayScreen.value = "";
-    }
-    displayScreen.value += enteredValue;
-    displayOutput.textContent = eval(displayScreen.value);
+    if (displayScreen.value == undefined) {
+        let firstInputAnOperator = isOperator(enteredValue);
+        console.log(firstInputAnOperator)
+        if (firstInputAnOperator) {
+            displayScreen.value = "";
+        } else {
+            displayScreen.value += enteredValue;
+            displayOutput.textContent = eval(displayScreen.value);
+        }
+    } else {
+        displayScreen.value += enteredValue;
+        displayOutput.textContent = eval(displayScreen.value);
+    }    
 }
 
 function resetInputScreen() {
@@ -23,4 +31,8 @@ function deleteInput() {
 function displayTotal() {
     displayScreen.value = displayOutput.textContent
     displayOutput.textContent = "0"
+}
+
+function isOperator(enteredValue) {
+    return isNaN(enteredValue)
 }
